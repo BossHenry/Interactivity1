@@ -7,7 +7,11 @@ function upDate(previewPic){
        2) Change the text  of the div with the id = "image" 
        to the alt text of the preview image 
        */
-      
+      var src = previewPic.getAttribute( "src" );
+      var alt = previewPic.getAttribute( "alt" );
+      document.getElementById('image').style.backgroundImage = "url('" + src + "')";
+      document.getElementById('image').innerHTML = alt;
+
        }
    
        function unDo(){
@@ -18,5 +22,8 @@ function upDate(previewPic){
        2) Change the text  of the div with the id = "image" 
        back to the original text.  You can use the html code to see what that original text was
        */
-     
+      a = document.getElementById('image');
+      a.style.backgroundImage = "url('')";
+       document.getElementById('image').innerHTML = "Hover over an image below to display here";
+      
        }
